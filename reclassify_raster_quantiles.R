@@ -1,8 +1,9 @@
 # takes an input raster x and a number of quantiles n
 # and returns a reclassified raster r
+# package "raster" needed
 
 recl_quantiles <- function(x, n){
-  q <- raster::quantile(x) %>% as.data.frame()
+  q <- as.data.frame(raster::quantile(x))
   if(n == 2) {
     m <- matrix(c(0, q[3,1], 1, q[3,1], q[5,1], 2),
                            ncol = 3, byrow = TRUE)
