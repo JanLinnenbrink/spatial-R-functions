@@ -1,3 +1,7 @@
+# Takes an input raster x and a number of classes n
+# to classify a raster dataset based on a method m
+# 1 = quantiles, 2 = equal intervals, 3 = natural jenks
+
 recl_ext <- function(x, n, m=1){
   
   rq <- list("raster", "BAMMtools")
