@@ -1,6 +1,7 @@
 # Takes an input raster x and a number of classes n
 # to classify a raster dataset based on a method m
 # 1 = quantiles, 2 = equal intervals, 3 = natural jenks
+# if m = 1, then max 5 classes are allowed (n <= 5)
 
 recl_ext <- function(x, n, m=1){
   
