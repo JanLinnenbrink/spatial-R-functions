@@ -28,6 +28,11 @@ recl_ext <- function(x, n, m=1){
                     q[2,1], q[3,1], 3, q[3,1], q[4,1], 4,
                     q[4,1], q[5,1], 5), ncol = 3, byrow = TRUE)
     }
+    if(n > 5) {
+      stop("number of classes too high.
+             Choose another classification method or
+             a lower number of classes (<5)")
+    }    
   }
   
   if(m==2) {
