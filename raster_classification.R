@@ -56,7 +56,3 @@ recl_ext <- function(x, n, m=1){
   r <- reclassify(x, m)
   return(r)
 }
-
-data(dem, package = "RQGIS")
-
-recl_ext(x = dem, m = 3, n = 100) %>% plot()
